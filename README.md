@@ -7,13 +7,13 @@
 3. [Volume des données](#volume-des-données)
 4. [Structure des données](#structure-des-données)
 5. [Persona](#persona)
-6. [Problématique métier](#problématique-métier)
+6. [Problématique](#problématique)
 
 ## Présentation du projet
 
 Ce projet a pour objectif de concevoir un dashboard interactif permettant d'explorer et d'analyser les décès enregistrés en France à partir des données disponibles sur data.gouv.fr.
 
-L'analyse portera principalement sur l'évolution du nombre de décès dans le temps, leur répartition géographique et les caractéristiques démographiques disponibles.
+L'analyse portera principalement sur la comparaison du nombre annuel moyen de décès entre les périodes 2015-2019 et 2020-2022, afin d'identifier les départements présentant les augmentations les plus importantes.
 
 Le projet s'appuie sur une architecture de traitement de données utilisant :
 
@@ -27,7 +27,7 @@ Le projet s'appuie sur une architecture de traitement de données utilisant :
 
 **Nom :** Agrégation des fichiers des personnes décédées
 
-**Période :** Dejanvier 1970 jusqu'en octobre 2026 (mis à jour tous les mois)
+**Période :** De janvier 1970 jusqu'en octobre 2026 (mis à jour tous les mois)
 
 **Source :** [data.gouv.fr](https://www.data.gouv.fr/datasets/agregation-des-fichiers-des-personnes-decedees)
 
@@ -66,8 +66,6 @@ Le jeu de données contient les informations suivantes :
 | `fichier_origine` | Fichier source dont provient l'enregistrement |
 | `opposition` | Booléen indiquant si une opposition a été enregistrée (True ou False) |
 
-Ces informations permettront notamment d'analyser l'évolution des décès selon les années, le sexe, l'âge au décès et les territoires.
-
 ## Persona
 
 ### Profil
@@ -80,11 +78,11 @@ Ces informations permettront notamment d'analyser l'évolution des décès selon
 
 Le journaliste souhaite :
 
-- Suivre l'évolution du nombre de décès en France au fil des années.
-- Identifier les années où il y a eu le plus de décès.
-- Comparer les décès selon les régions et les départements.
-- Analyser l'âge des personnes décédées.
-- Comparer le nombre de décès entre les hommes et les femmes.
+- Comparer le nombre de décès entre les périodes 2015-2019 et 2020-2022.
+- Identifier les départements où le nombre de décès a le plus augmenté.
+- Visualiser les différences entre les départements.
+- Repérer les territoires qui méritent une analyse plus approfondie.
+- Utiliser les graphiques du dashboard pour préparer ses articles.
 
 ### Fréquence d'utilisation
 
@@ -92,6 +90,8 @@ Le tableau de bord sera utilisé lors de la préparation d'articles ou de report
 
 ## Problématique
 
-**Comment le nombre de décès en France a-t-il évolué depuis 1970, et quelles différences peut-on observer selon les périodes, les territoires, l'âge et le sexe des personnes décédées ?**
+**Quels départements français ont connu les plus fortes augmentations du nombre annuel moyen de décès sur la période 2020-2022, par rapport à la période 2015-2019 ?**
 
 L'objectif du dashboard est de permettre au journaliste d'identifier rapidement les tendances importantes et de les présenter au grand public à travers des visualisations simples et compréhensibles.
+
+Décision éditoriale : sélectionner les départements à étudier en priorité pour préparer un article sur l'évolution des décès durant la période 2020-2022.
